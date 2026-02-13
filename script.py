@@ -5,10 +5,7 @@ from bs4 import BeautifulSoup
 from googleapiclient.discovery import build
 import json
 import asyncio
-from requests_html import HTMLSession
 
-
-fb_session = HTMLSession()
 
 load_dotenv()
 developer_key = os.getenv('DEVELOPER_KEY')
