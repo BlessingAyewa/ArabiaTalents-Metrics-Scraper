@@ -125,7 +125,7 @@ async def scrape(row: list, session, browser, stopper):
         old_comment_count = row[5] if row[5] else 0
         
         if scrape_check == 'FALSE':
-            return int(old_view_count.strip()), int(old_like_count), int(old_comment_count.strip())
+            return int(old_view_count), int(old_like_count), int(old_comment_count)
         
         if 'Youtube' in platform:
             scraped_views, scraped_likes, scraped_comments = await youtube_scraper(
